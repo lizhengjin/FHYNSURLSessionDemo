@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6ir-a9-f3S">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--URL Session Handle View Controller-->
+        <scene sceneID="cfY-gY-Q1q">
+            <objects>
+                <viewController storyboardIdentifier="FHYURLSessionHandleViewController" id="po2-Ec-Is4" customClass="FHYURLSessionHandleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ROT-ud-m5K"/>
+                        <viewControllerLayoutGuide type="bottom" id="9qp-gc-QIA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5k-z3-L0m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nG-yx-oPk">
+                                <rect key="frame" x="28" y="359" width="42" height="31"/>
+                                <animations/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="po2-Ec-Is4" eventType="touchUpInside" id="d3a-1l-N10"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-Of-CO2">
+                                <rect key="frame" x="139" y="359" width="42" height="31"/>
+                                <animations/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="po2-Ec-Is4" eventType="touchUpInside" id="1LR-Zz-ctx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-E9-ZUn">
+                                <rect key="frame" x="229" y="359" width="55" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="po2-Ec-Is4" eventType="touchUpInside" id="i9l-hI-qmQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqN-k9-t5v">
+                                <rect key="frame" x="32" y="404" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="get:" destination="po2-Ec-Is4" eventType="touchUpInside" id="7ub-vm-WSP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6C-70-4Pa">
+                                <rect key="frame" x="144" y="404" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="post:" destination="po2-Ec-Is4" eventType="touchUpInside" id="zs3-Iy-h3r"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-E4-xbq">
+                                <rect key="frame" x="28" y="71" width="256" height="229"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-KE-yKr">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="2.5"/>
+                                <animations/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="百分比" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxv-FR-CGQ">
+                                <rect key="frame" x="23" y="459" width="256" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxkb / xx kb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-mz-XGN">
+                                <rect key="frame" x="16" y="496.5" width="256" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Yuq-E4-xbq" id="tMF-Iq-sAc"/>
+                        <outlet property="percentageLabel" destination="Vxv-FR-CGQ" id="Zrc-4K-CBf"/>
+                        <outlet property="progressLabel" destination="GaX-mz-XGN" id="mIs-YJ-wQ0"/>
+                        <outlet property="progressView" destination="hiR-KE-yKr" id="YGC-ay-t9E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WjE-Xj-QPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="-439"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="ZIw-zq-R00">
+            <objects>
+                <tableViewController storyboardIdentifier="RootTableViewController" id="RHG-N7-aWC" customClass="RootTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aDC-Wr-Z6X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="defaultCell" id="lr2-oB-blk">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lr2-oB-blk" id="xTW-FW-A7L">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RHG-N7-aWC" id="2W6-HC-bcG"/>
+                            <outlet property="delegate" destination="RHG-N7-aWC" id="1oJ-7a-LP0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="v9W-ax-Yix">
+                        <barButtonItem key="leftBarButtonItem" title="AFN" id="Y6n-wS-FPJ">
+                            <connections>
+                                <segue destination="KMt-yw-oj3" kind="push" id="JNB-Y7-J5m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INs-MT-SQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="249"/>
+        </scene>
+        <!--AFNetworking-->
+        <scene sceneID="2ss-vn-Zua">
+            <objects>
+                <viewController storyboardIdentifier="AFNViewController" id="KMt-yw-oj3" customClass="AFNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ufu-1e-zX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Tf-rh-CvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5hs-Pc-KzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oGE-MO-SQF">
+                                <rect key="frame" x="66" y="72" width="189" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.48403550278730356" blue="0.56087574691311592" alpha="0.088070700354609927" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="j49-CA-Rzw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzo-lw-TBm">
+                                <rect key="frame" x="139" y="296" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="KMt-yw-oj3" eventType="touchUpInside" id="idj-wF-9em"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RW-BT-ExM">
+                                <rect key="frame" x="200" y="296" width="55" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="KMt-yw-oj3" eventType="touchUpInside" id="fgh-3o-hXD"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-jm-duu">
+                                <rect key="frame" x="85" y="283" width="150" height="2.5"/>
+                                <animations/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-fJ-cAt">
+                                <rect key="frame" x="68" y="382" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="get:" destination="KMt-yw-oj3" eventType="touchUpInside" id="J8K-ec-HN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5C-nZ-0IY">
+                                <rect key="frame" x="140" y="382" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="post:" destination="KMt-yw-oj3" eventType="touchUpInside" id="Nuh-cw-F5M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR4-uD-Gel">
+                                <rect key="frame" x="207" y="382" width="50" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="upload:" destination="KMt-yw-oj3" eventType="touchUpInside" id="MDY-rY-tJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXM-d5-fSo">
+                                <rect key="frame" x="66" y="296" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="KMt-yw-oj3" eventType="touchUpInside" id="uoh-vS-XqL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oGE-MO-SQF" firstAttribute="top" secondItem="Ufu-1e-zX7" secondAttribute="bottom" constant="8" id="cW0-hB-yxc"/>
+                            <constraint firstItem="oGE-MO-SQF" firstAttribute="leading" secondItem="5hs-Pc-KzJ" secondAttribute="leadingMargin" constant="50" id="xEa-A7-yDn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oGE-MO-SQF" secondAttribute="trailing" constant="49" id="yQx-bF-j7I"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AFNetworking" id="TbJ-JL-QNB"/>
+                    <connections>
+                        <outlet property="imageView" destination="oGE-MO-SQF" id="eeD-1F-d8f"/>
+                        <outlet property="progressView" destination="mU4-jm-duu" id="JdJ-Lp-e64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hit-X7-bb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="249"/>
+        </scene>
+        <!--URL Session Data Task Show-->
+        <scene sceneID="2Wk-2Q-cB6">
+            <objects>
+                <viewController storyboardIdentifier="NSURLSessionDataTaskShow" id="d0g-GH-nZ1" customClass="NSURLSessionDataTaskShow" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xwd-5X-Ve2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Vt-Rp-9uX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q3n-xO-9b7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klp-A2-RUJ">
+                                <rect key="frame" x="40" y="60" width="53" height="36"/>
+                                <animations/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="get:" destination="d0g-GH-nZ1" eventType="touchUpInside" id="Zp6-35-jHj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXu-lK-l7L">
+                                <rect key="frame" x="240" y="63" width="40" height="30"/>
+                                <animations/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="post:" destination="d0g-GH-nZ1" eventType="touchUpInside" id="ew4-cV-9dc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsN-OV-46M">
+                                <rect key="frame" x="141" y="63" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="GET2"/>
+                                <connections>
+                                    <action selector="get2:" destination="d0g-GH-nZ1" eventType="touchUpInside" id="91u-Rh-jn2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiA-Jr-MY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="913"/>
+        </scene>
+        <!--URL Session Download Task Show-->
+        <scene sceneID="SYv-En-X56">
+            <objects>
+                <viewController storyboardIdentifier="NSURLSessionDownloadTaskShow" id="Vn0-7y-hFJ" customClass="NSURLSessionDownloadTaskShow" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iMM-cv-9Md"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wG-43-jbH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xJs-B8-bf9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TT2-27-elD">
+                                <rect key="frame" x="40" y="93" width="240" height="266"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.9284386794450552" green="1" blue="0.25710264935722649" alpha="0.088070700354609927" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPH-Bo-3gB">
+                                <rect key="frame" x="232" y="420" width="51" height="30"/>
+                                <animations/>
+                                <state key="normal" title="resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="Vn0-7y-hFJ" eventType="touchUpInside" id="2iG-FZ-C91"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6b-ZE-0DD">
+                                <rect key="frame" x="139" y="420" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="Vn0-7y-hFJ" eventType="touchUpInside" id="vw6-mt-sNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGT-x7-Z4k">
+                                <rect key="frame" x="46" y="420" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="Vn0-7y-hFJ" eventType="touchUpInside" id="BTn-ib-le7"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="41k-y7-aTt">
+                                <rect key="frame" x="85" y="398" width="150" height="2.5"/>
+                                <animations/>
+                            </progressView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7ge-hg-qFL"/>
+                    <connections>
+                        <outlet property="imageView" destination="TT2-27-elD" id="Kfa-CJ-zFp"/>
+                        <outlet property="pause" destination="J6b-ZE-0DD" id="Y4Q-wd-Zad"/>
+                        <outlet property="progressBar" destination="41k-y7-aTt" id="G8U-JF-Hcf"/>
+                        <outlet property="resume" destination="PPH-Bo-3gB" id="TJq-Qp-yVA"/>
+                        <outlet property="start" destination="hGT-x7-Z4k" id="hAA-vz-e0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owu-vd-qGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="913"/>
+        </scene>
+        <!--URL Session Upload Task Show-->
+        <scene sceneID="VJ3-7e-I11">
+            <objects>
+                <viewController storyboardIdentifier="NSURLSessionUploadTaskShow" id="wyD-CX-Y9y" customClass="NSURLSessionUploadTaskShow" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4B6-iI-opf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ATm-gw-mG1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="51Y-3L-5YT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REE-Eb-f6n">
+                                <rect key="frame" x="135" y="123" width="50" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="upload:" destination="wyD-CX-Y9y" eventType="touchUpInside" id="uCp-gR-LNa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHJ-RP-AFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="913"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PfU-Tn-bOK">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" id="6ir-a9-f3S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZNW-mU-9Sn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RHG-N7-aWC" kind="relationship" relationship="rootViewController" id="Aby-uK-A8T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJC-pl-pJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="249"/>
+        </scene>
+    </scenes>
+</document>
